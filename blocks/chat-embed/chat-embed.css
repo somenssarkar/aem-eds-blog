@@ -1,0 +1,2 @@
+/* Iframe is appended directly to document.body by chat-embed.js — no block-level styles needed */
+.block.chat-embed { display: none; }
