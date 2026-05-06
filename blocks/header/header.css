@@ -1,9 +1,11 @@
 /* header and nav layout */
 header .nav-wrapper {
   background-color: var(--background-color);
+  border-bottom: 1px solid #e5e7eb;
   width: 100%;
-  z-index: 2;
-  position: fixed;
+  z-index: 10;
+  position: sticky;
+  top: 0;
 }
 
 header nav {
@@ -269,4 +271,46 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+/* ── Visual overrides to match the Next.js Knowledge Hub nav ── */
+
+/* nav height: 56px (h-14) to match Tailwind h-14 */
+:root {
+  --nav-height: 56px;
+}
+
+/* brand — bold blue, no underline, tracks hover like the Next.js brand link */
+header .nav-brand {
+  flex-basis: auto;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+header .nav-brand a:any-link {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+header .nav-brand a:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+/* nav links — gray default, blue on hover, no underline */
+header nav .nav-sections ul > li {
+  font-weight: 400;
+}
+
+header nav .nav-sections ul > li a:any-link {
+  color: #4b5563;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+header nav .nav-sections ul > li a:hover {
+  color: #1d4ed8;
+  text-decoration: none;
 }
